@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="66C-uA-Ygn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ACe-3r-LPF"/>
+                                    <constraint firstAttribute="width" constant="160" id="z3i-ml-cFg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Mj-mW-QOo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="DVr-Ze-kMf"/>
+                                    <constraint firstAttribute="height" constant="80" id="OPL-1s-Wpl"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Nt-av-0n7">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="101" id="kFR-xS-spC" customClass="FoodTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kFR-xS-spC" id="ZCj-Bg-1M9">
+                                            <frame key="frameInset" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u64-qy-8fH">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="e9R-qu-shE"/>
+                                                        <constraint firstAttribute="width" constant="100" id="nJT-Sd-tV3"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="nasi_lemak"/>
+                                                    <connections>
+                                                        <action selector="onFoodButtonPressed:" destination="kFR-xS-spC" eventType="touchUpInside" id="qmb-jQ-kgA"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNa-78-RZ5">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="ujI-Id-Xap"/>
+                                                        <constraint firstAttribute="width" constant="100" id="xU5-1R-vzV"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="roti_canai"/>
+                                                    <connections>
+                                                        <action selector="onFoodButtonPressed:" destination="kFR-xS-spC" eventType="touchUpInside" id="rjO-qx-06m"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-Q8-SO6">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="F67-48-X4o"/>
+                                                        <constraint firstAttribute="width" constant="100" id="SuO-Es-ced"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="satay"/>
+                                                    <connections>
+                                                        <action selector="onFoodButtonPressed:" destination="kFR-xS-spC" eventType="touchUpInside" id="Vo8-Se-CoT"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pbN-Q8-SO6" secondAttribute="trailing" id="LZq-Af-ezK"/>
+                                                <constraint firstItem="pbN-Q8-SO6" firstAttribute="centerY" secondItem="ZCj-Bg-1M9" secondAttribute="centerY" id="akS-q1-Ssb"/>
+                                                <constraint firstItem="u64-qy-8fH" firstAttribute="leading" secondItem="ZCj-Bg-1M9" secondAttribute="leading" id="mPf-3r-43a"/>
+                                                <constraint firstItem="KNa-78-RZ5" firstAttribute="centerY" secondItem="ZCj-Bg-1M9" secondAttribute="centerY" id="tC0-Qy-egZ"/>
+                                                <constraint firstItem="u64-qy-8fH" firstAttribute="centerY" secondItem="ZCj-Bg-1M9" secondAttribute="centerY" id="wxw-BH-9xl"/>
+                                                <constraint firstItem="KNa-78-RZ5" firstAttribute="centerX" secondItem="ZCj-Bg-1M9" secondAttribute="centerX" id="z6F-4t-buo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" rowHeight="101" id="IcD-L3-egC" customClass="DrinkTableViewCell">
+                                        <rect key="frame" x="0.0" y="129" width="375" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IcD-L3-egC" id="X1v-5R-zoP">
+                                            <frame key="frameInset" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-rY-g17">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="L3l-xC-QYV"/>
+                                                        <constraint firstAttribute="width" constant="100" id="O6l-3G-jYN"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="syrup"/>
+                                                    <connections>
+                                                        <action selector="onDrinkButtonPressed:" destination="IcD-L3-egC" eventType="touchUpInside" id="w7u-5j-XgL"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1w-0J-EUv">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="CiM-PC-a5T"/>
+                                                        <constraint firstAttribute="width" constant="100" id="IeG-VA-0BZ"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="teh_tarik"/>
+                                                    <connections>
+                                                        <action selector="onDrinkButtonPressed:" destination="IcD-L3-egC" eventType="touchUpInside" id="5P3-zh-UO8"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGf-ac-Hx6">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="9Av-lJ-Dvr"/>
+                                                        <constraint firstAttribute="height" constant="80" id="dwf-Ep-QWa"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="limau_ais"/>
+                                                    <connections>
+                                                        <action selector="onDrinkButtonPressed:" destination="IcD-L3-egC" eventType="touchUpInside" id="6fM-HO-zs1"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bGf-ac-Hx6" firstAttribute="centerY" secondItem="X1v-5R-zoP" secondAttribute="centerY" id="5y2-5R-gn6"/>
+                                                <constraint firstAttribute="trailing" secondItem="bGf-ac-Hx6" secondAttribute="trailing" id="9xr-cE-6eT"/>
+                                                <constraint firstItem="j1w-0J-EUv" firstAttribute="centerX" secondItem="X1v-5R-zoP" secondAttribute="centerX" id="RaQ-Hw-Pn4"/>
+                                                <constraint firstItem="GbA-rY-g17" firstAttribute="leading" secondItem="X1v-5R-zoP" secondAttribute="leading" id="XGY-f8-G06"/>
+                                                <constraint firstItem="j1w-0J-EUv" firstAttribute="centerY" secondItem="X1v-5R-zoP" secondAttribute="centerY" id="brJ-CX-hCw"/>
+                                                <constraint firstItem="GbA-rY-g17" firstAttribute="centerY" secondItem="X1v-5R-zoP" secondAttribute="centerY" id="kTh-t1-zvF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3Nt-av-0n7" secondAttribute="bottom" id="5nE-h8-NgB"/>
+                            <constraint firstItem="3Nt-av-0n7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GD7-v9-FXA"/>
+                            <constraint firstAttribute="trailing" secondItem="3Nt-av-0n7" secondAttribute="trailing" id="acV-kl-gsv"/>
+                            <constraint firstItem="66C-uA-Ygn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="dgH-hn-6UM"/>
+                            <constraint firstItem="3Nt-av-0n7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="exC-8w-HTu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Mj-mW-QOo" secondAttribute="trailing" id="fKy-l9-YYd"/>
+                            <constraint firstItem="66C-uA-Ygn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="lWg-xa-AZN"/>
+                            <constraint firstItem="9Mj-mW-QOo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="mSr-R9-yPs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drinkImageView" destination="9Mj-mW-QOo" id="yhd-gi-qKQ"/>
+                        <outlet property="foodImageView" destination="66C-uA-Ygn" id="6du-Nc-27m"/>
+                        <outlet property="tableView" destination="3Nt-av-0n7" id="nxn-Xf-SUB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="-53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="limau_ais" width="225" height="225"/>
+        <image name="nasi_lemak" width="259" height="194"/>
+        <image name="roti_canai" width="238" height="212"/>
+        <image name="satay" width="282" height="179"/>
+        <image name="syrup" width="259" height="194"/>
+        <image name="teh_tarik" width="185" height="185"/>
+    </resources>
+</document>

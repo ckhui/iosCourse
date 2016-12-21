@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Book" representedClassName="Book" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasComment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="onBook" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="readBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="read" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Comment" representedClassName="Comment" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="onBook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="hasComment" inverseEntity="Book" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="isFriend" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="friend" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="friendOf" inverseEntity="User" syncable="YES"/>
+        <relationship name="friendOf" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="friend" inverseEntity="User" syncable="YES"/>
+        <relationship name="read" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Book" inverseName="readBy" inverseEntity="Book" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Book" positionX="-45" positionY="36" width="128" height="90"/>
+        <element name="Comment" positionX="-54" positionY="36" width="128" height="75"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="120"/>
+    </elements>
+</model>

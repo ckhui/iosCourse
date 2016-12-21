@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head1" translatesAutoresizingMaskIntoConstraints="NO" id="heI-1t-VLB" customClass="MoveableHead">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="0J2-3n-DmT"/>
+                                    <constraint firstAttribute="height" constant="70" id="3aB-DH-Qs8"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head2" translatesAutoresizingMaskIntoConstraints="NO" id="QcR-2i-D3z" customClass="MoveableHead">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="259-2h-K1m"/>
+                                    <constraint firstAttribute="height" constant="70" id="dQQ-Xm-PQg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head4" translatesAutoresizingMaskIntoConstraints="NO" id="XBl-PY-sZ5" customClass="MoveableHead">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="heK-kg-bdk"/>
+                                    <constraint firstAttribute="width" constant="70" id="oYK-eh-mVl"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="body1.png" translatesAutoresizingMaskIntoConstraints="NO" id="BRm-E2-Olg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="AEd-7g-h0Y"/>
+                                    <constraint firstAttribute="width" constant="350" id="e8v-n1-5GD"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head3" translatesAutoresizingMaskIntoConstraints="NO" id="EwQ-b5-MH3" customClass="MoveableHead">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1n0-zI-4Pv"/>
+                                    <constraint firstAttribute="width" constant="70" id="HpN-VS-jWn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="heI-1t-VLB" firstAttribute="leading" secondItem="QcR-2i-D3z" secondAttribute="trailing" constant="10" id="4eG-wg-c5S"/>
+                            <constraint firstItem="heI-1t-VLB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="7Ef-8E-iWH"/>
+                            <constraint firstItem="XBl-PY-sZ5" firstAttribute="leading" secondItem="heI-1t-VLB" secondAttribute="trailing" constant="10" id="Asy-yN-eO8"/>
+                            <constraint firstItem="EwQ-b5-MH3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Ib7-FW-pTD"/>
+                            <constraint firstItem="QcR-2i-D3z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Rmb-vy-5w6"/>
+                            <constraint firstItem="QcR-2i-D3z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="T8w-2k-kd1"/>
+                            <constraint firstItem="XBl-PY-sZ5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="W4A-Pb-cbG"/>
+                            <constraint firstItem="BRm-E2-Olg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gfO-96-BJf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BRm-E2-Olg" secondAttribute="bottom" id="oBv-jc-hXn"/>
+                            <constraint firstItem="EwQ-b5-MH3" firstAttribute="leading" secondItem="XBl-PY-sZ5" secondAttribute="trailing" constant="10" id="zhe-gL-5cr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="body1.png" width="894" height="894"/>
+        <image name="head1" width="246" height="205"/>
+        <image name="head2" width="217" height="232"/>
+        <image name="head3" width="228" height="221"/>
+        <image name="head4" width="740" height="720"/>
+    </resources>
+</document>

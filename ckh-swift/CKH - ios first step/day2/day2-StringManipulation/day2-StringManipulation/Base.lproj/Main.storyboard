@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mxI-QP-YIc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Isogram-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="IsogramViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS9-3r-J6T">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes or No ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hy-re-de6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTE-Qw-DlQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="QmZ-TP-JSe"/>
+                                    <constraint firstAttribute="height" constant="30" id="jVb-12-7Tp"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztg-sK-OcU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Fy-x8-JhT"/>
+                                    <constraint firstAttribute="width" constant="130" id="ibO-ge-YpH"/>
+                                </constraints>
+                                <state key="normal" title="Is this anagram?"/>
+                                <connections>
+                                    <action selector="anaButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7gh-77-ZkM"/>
+                                    <action selector="checkPalindrome:" destination="q35-Yj-KMs" eventType="touchUpInside" id="syk-Fc-uI9"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sC8-sT-1D2">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="LFq-qD-HbK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="i6q-dZ-xx5"/>
+                                    <constraint firstAttribute="height" constant="30" id="lue-IA-7f4"/>
+                                    <constraint firstAttribute="width" constant="200" id="pzo-ev-WKe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XTE-Qw-DlQ" firstAttribute="top" secondItem="1Hy-re-de6" secondAttribute="bottom" constant="80" id="DHh-Ee-KDP"/>
+                            <constraint firstItem="1Hy-re-de6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LjN-xT-KVx"/>
+                            <constraint firstItem="sC8-sT-1D2" firstAttribute="top" secondItem="XTE-Qw-DlQ" secondAttribute="bottom" constant="30" id="SO4-El-rwE"/>
+                            <constraint firstItem="sC8-sT-1D2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vkr-xg-HfP"/>
+                            <constraint firstItem="1Hy-re-de6" firstAttribute="top" secondItem="WS9-3r-J6T" secondAttribute="bottom" constant="20" id="Yfc-ME-CJO"/>
+                            <constraint firstItem="ztg-sK-OcU" firstAttribute="top" secondItem="sC8-sT-1D2" secondAttribute="bottom" constant="30" id="dEp-Jg-1qq"/>
+                            <constraint firstItem="WS9-3r-J6T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8O-1T-7e2"/>
+                            <constraint firstItem="XTE-Qw-DlQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-15" id="osa-qM-L1P"/>
+                            <constraint firstItem="ztg-sK-OcU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pQc-X3-2Cb"/>
+                            <constraint firstItem="XTE-Qw-DlQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vrP-MM-tgT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Isogram" id="Fbt-Bb-RHh"/>
+                    <connections>
+                        <outlet property="anaResult" destination="1Hy-re-de6" id="8Vc-xB-lHx"/>
+                        <outlet property="text1" destination="XTE-Qw-DlQ" id="hJn-8b-t2r"/>
+                        <outlet property="text2" destination="sC8-sT-1D2" id="BsY-Fz-ny3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1596" y="63"/>
+        </scene>
+        <!--Anagram-->
+        <scene sceneID="csT-Yg-kt9">
+            <objects>
+                <viewController id="gx3-ef-fdf" customClass="AnagramViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EJt-Ts-Jit"/>
+                        <viewControllerLayoutGuide type="bottom" id="igs-OU-iJ7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="izQ-xO-cT7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Isogram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud7-6V-wYd">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes or No ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMc-sh-HZo">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTS-Ga-9J5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="WRx-Zh-ThX"/>
+                                    <constraint firstAttribute="height" constant="30" id="jkC-Jw-s4P"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhh-Pw-Ajn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="RwB-Wj-Paw"/>
+                                    <constraint firstAttribute="height" constant="30" id="z3p-6S-xIo"/>
+                                </constraints>
+                                <state key="normal" title="Is this isogram?"/>
+                                <connections>
+                                    <action selector="checkPalindrome:" destination="q35-Yj-KMs" eventType="touchUpInside" id="rde-0c-ZC0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZMc-sh-HZo" firstAttribute="top" secondItem="Ud7-6V-wYd" secondAttribute="bottom" constant="20" id="F2Z-3L-Hun"/>
+                            <constraint firstItem="eTS-Ga-9J5" firstAttribute="centerX" secondItem="izQ-xO-cT7" secondAttribute="centerX" id="Kf5-JA-p5t"/>
+                            <constraint firstItem="eTS-Ga-9J5" firstAttribute="top" secondItem="ZMc-sh-HZo" secondAttribute="bottom" constant="80" id="ML5-tz-MAP"/>
+                            <constraint firstItem="eTS-Ga-9J5" firstAttribute="centerY" secondItem="izQ-xO-cT7" secondAttribute="centerY" id="Ouy-Zu-no2"/>
+                            <constraint firstItem="ZMc-sh-HZo" firstAttribute="centerX" secondItem="izQ-xO-cT7" secondAttribute="centerX" id="Skd-XL-CPM"/>
+                            <constraint firstItem="Yhh-Pw-Ajn" firstAttribute="centerX" secondItem="izQ-xO-cT7" secondAttribute="centerX" id="cHj-05-aId"/>
+                            <constraint firstItem="Ud7-6V-wYd" firstAttribute="centerX" secondItem="izQ-xO-cT7" secondAttribute="centerX" id="sXn-9G-HvK"/>
+                            <constraint firstItem="Yhh-Pw-Ajn" firstAttribute="top" secondItem="eTS-Ga-9J5" secondAttribute="bottom" constant="20" id="z6h-bs-SIS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Anagram" id="fCK-tD-j42"/>
+                    <connections>
+                        <outlet property="isoButton" destination="Yhh-Pw-Ajn" id="7gc-bL-QFB"/>
+                        <outlet property="isoInput" destination="eTS-Ga-9J5" id="Yx6-bi-gz8"/>
+                        <outlet property="isoResult" destination="ZMc-sh-HZo" id="4SJ-Nc-e6Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="it5-el-dpy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1596" y="-605.84707646176912"/>
+        </scene>
+        <!--Palidrome-->
+        <scene sceneID="aYn-2Q-2wD">
+            <objects>
+                <viewController id="q35-Yj-KMs" customClass="ParlindromeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JYJ-wt-pV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="3wV-TI-7pe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iid-Fw-O8z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palindrome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6N-uM-9HH">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palindrome Checker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9S-G2-toV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bxu-pG-EKz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ptu-4C-ax7"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZV-sM-oCN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EBj-KA-deN"/>
+                                    <constraint firstAttribute="width" constant="130" id="egu-b6-9sf"/>
+                                </constraints>
+                                <state key="normal" title="Is this palindrome?"/>
+                                <connections>
+                                    <action selector="checkPalindrome:" destination="q35-Yj-KMs" eventType="touchUpInside" id="cKS-xq-dXZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bxu-pG-EKz" firstAttribute="top" secondItem="d9S-G2-toV" secondAttribute="bottom" constant="80" id="1c9-r0-RIw"/>
+                            <constraint firstItem="A6N-uM-9HH" firstAttribute="centerX" secondItem="iid-Fw-O8z" secondAttribute="centerX" id="ARK-B6-aWG"/>
+                            <constraint firstItem="d9S-G2-toV" firstAttribute="centerX" secondItem="iid-Fw-O8z" secondAttribute="centerX" id="Ky7-4h-7P0"/>
+                            <constraint firstItem="UZV-sM-oCN" firstAttribute="centerX" secondItem="iid-Fw-O8z" secondAttribute="centerX" id="KzT-dK-qfU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bxu-pG-EKz" secondAttribute="trailing" constant="10" id="Pkc-rB-hUY"/>
+                            <constraint firstItem="d9S-G2-toV" firstAttribute="top" secondItem="A6N-uM-9HH" secondAttribute="bottom" constant="20" id="Ufc-Rh-TlX"/>
+                            <constraint firstItem="Bxu-pG-EKz" firstAttribute="centerY" secondItem="iid-Fw-O8z" secondAttribute="centerY" id="WUa-zN-c5O"/>
+                            <constraint firstItem="UZV-sM-oCN" firstAttribute="top" secondItem="Bxu-pG-EKz" secondAttribute="bottom" constant="20" id="g7E-3d-g9A"/>
+                            <constraint firstItem="Bxu-pG-EKz" firstAttribute="leading" secondItem="iid-Fw-O8z" secondAttribute="leadingMargin" constant="10" id="kJo-pX-J1q"/>
+                            <constraint firstItem="Bxu-pG-EKz" firstAttribute="centerX" secondItem="iid-Fw-O8z" secondAttribute="centerX" id="sGC-r4-e7U"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Palidrome" id="CfT-4m-umd"/>
+                    <connections>
+                        <outlet property="parlidromeResult" destination="d9S-G2-toV" id="8xR-0k-JH2"/>
+                        <outlet property="textField" destination="Bxu-pG-EKz" id="xEH-3M-Nma"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fG3-1r-aAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1596" y="-1261.6191904047978"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BHr-eo-ACN">
+            <objects>
+                <tabBarController id="mxI-QP-YIc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Yqr-TN-W86">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="q35-Yj-KMs" kind="relationship" relationship="viewControllers" id="Bd1-cj-MFI"/>
+                        <segue destination="gx3-ef-fdf" kind="relationship" relationship="viewControllers" id="Bk9-Td-Wze"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qK8-Tj-cYN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gvw-Ao-R0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2596" y="-512"/>
+        </scene>
+    </scenes>
+</document>

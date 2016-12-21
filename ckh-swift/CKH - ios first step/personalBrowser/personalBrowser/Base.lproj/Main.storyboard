@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gkM-jf-uiR">
+                                <frame key="frameInset" minX="177" minY="323.5" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECu-2u-BDs">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45W-il-keV">
+                                        <frame key="frameInset" minX="207.5" minY="-5" width="47" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Reload"/>
+                                        <connections>
+                                            <action selector="onReloadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1TM-J9-pYf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-yV-8OV">
+                                        <frame key="frameInset" minX="172.5" minY="-5" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="newTabPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="94w-1e-TYI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR2-a8-45C">
+                                        <frame key="frameInset" minX="97" minY="-5" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jv4-81-AJd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rr-pT-llR">
+                                        <frame key="frameInset" minX="262" minY="-5" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="onForwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1g-Ip-guy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vo-lM-3GP">
+                                        <frame key="frameInset" minX="135.5" minY="-5" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="onStopLoadingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="opt-ml-h5a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lrw-hX-uYU"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOd-hc-nt7">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRL-kE-7Yi">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8F-pG-r3f">
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfr-cn-0hV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8i-xF-ghP">
+                                        <state key="normal" title="Go"/>
+                                        <connections>
+                                            <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZxY-bD-0xr"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogd-QH-CLd">
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="a8F-pG-r3f" firstAttribute="top" secondItem="JRL-kE-7Yi" secondAttribute="top" id="9ub-c9-jNU"/>
+                                    <constraint firstAttribute="trailing" secondItem="K8i-xF-ghP" secondAttribute="trailing" constant="5" id="GkU-EX-GPu"/>
+                                    <constraint firstItem="K8i-xF-ghP" firstAttribute="top" secondItem="JRL-kE-7Yi" secondAttribute="top" id="LuU-Pa-RRA"/>
+                                    <constraint firstItem="ogd-QH-CLd" firstAttribute="top" secondItem="JRL-kE-7Yi" secondAttribute="top" id="TYY-nR-udK"/>
+                                    <constraint firstItem="a8F-pG-r3f" firstAttribute="leading" secondItem="ogd-QH-CLd" secondAttribute="trailing" constant="5" id="b1i-pJ-dJQ"/>
+                                    <constraint firstItem="ogd-QH-CLd" firstAttribute="leading" secondItem="JRL-kE-7Yi" secondAttribute="leading" constant="5" id="fxb-u5-PIg"/>
+                                    <constraint firstAttribute="height" constant="30" id="v4j-nv-iLI"/>
+                                    <constraint firstItem="K8i-xF-ghP" firstAttribute="leading" secondItem="a8F-pG-r3f" secondAttribute="trailing" constant="10" id="xEp-oh-QzM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HOd-hc-nt7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EkB-8c-lOx"/>
+                            <constraint firstItem="JRL-kE-7Yi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="Frf-aS-gm1"/>
+                            <constraint firstItem="JRL-kE-7Yi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LMK-zF-XSi"/>
+                            <constraint firstItem="ECu-2u-BDs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TxI-Gv-dJ7"/>
+                            <constraint firstItem="HOd-hc-nt7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bmd-oP-isV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JRL-kE-7Yi" secondAttribute="trailing" id="eeF-pw-zYP"/>
+                            <constraint firstAttribute="trailing" secondItem="ECu-2u-BDs" secondAttribute="trailing" id="jQa-38-N22"/>
+                            <constraint firstItem="JRL-kE-7Yi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rNf-wT-rhS"/>
+                            <constraint firstItem="ECu-2u-BDs" firstAttribute="top" secondItem="HOd-hc-nt7" secondAttribute="bottom" id="rRP-uo-XZ2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ECu-2u-BDs" secondAttribute="bottom" id="ts6-d0-Ad5"/>
+                            <constraint firstAttribute="trailing" secondItem="HOd-hc-nt7" secondAttribute="trailing" id="xyK-WN-DnF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="dR2-a8-45C" id="8Po-bm-qow"/>
+                        <outlet property="forwardButton" destination="3rr-pT-llR" id="tvd-we-iw9"/>
+                        <outlet property="loadingCircle" destination="gkM-jf-uiR" id="JHv-ZB-2vh"/>
+                        <outlet property="topViewGroup" destination="JRL-kE-7Yi" id="WLz-VE-hP0"/>
+                        <outlet property="urlTextField" destination="ogd-QH-CLd" id="fj0-hk-L6L"/>
+                        <outlet property="variableWebView" destination="HOd-hc-nt7" id="qKb-7o-ShW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498.39999999999998" y="22.938530734632685"/>
+        </scene>
+    </scenes>
+</document>

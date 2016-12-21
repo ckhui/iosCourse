@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCl-ft-sfp">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="E7a-jh-iC5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="xnw-kd-U1m"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="bttUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kao-W2-rQL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-gR-tbm">
+                                <color key="backgroundColor" red="0.37675791217329302" green="0.93327836769553874" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="fEt-tQ-6af"/>
+                                    <constraint firstAttribute="width" constant="240" id="uNT-ri-xPW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94z-NK-EPb">
+                                <color key="backgroundColor" red="1" green="0.052566848628844864" blue="0.22585512118923146" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="GOY-XY-721"/>
+                                    <constraint firstAttribute="width" constant="240" id="IZm-Jh-zeU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vT8-sv-CNO">
+                                <color key="backgroundColor" red="0.29932996997393324" green="1" blue="0.046533410841772871" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vT8-sv-CNO" secondAttribute="height" multiplier="30:8" id="DDX-aB-6sN"/>
+                                    <constraint firstAttribute="height" constant="30" id="SxQ-8M-2xa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vCl-ft-sfp" secondAttribute="bottom" constant="40" id="3cX-ad-rI5"/>
+                            <constraint firstItem="vT8-sv-CNO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tow-wF-jD3"/>
+                            <constraint firstItem="eB8-gR-tbm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ZQ0-3F-to2"/>
+                            <constraint firstItem="94z-NK-EPb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eRy-lq-RXZ"/>
+                            <constraint firstItem="94z-NK-EPb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kAs-E8-enT"/>
+                            <constraint firstItem="vCl-ft-sfp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nCk-pv-wv8"/>
+                            <constraint firstItem="eB8-gR-tbm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s8n-AC-QBG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vT8-sv-CNO" secondAttribute="bottom" constant="50" id="zbp-it-cIB"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="N8O-Ak-yV1" appends="YES" id="37g-pU-w5o"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="N8O-Ak-yV1"/>
+            </objects>
+            <point key="canvasLocation" x="-95.200000000000003" y="183.95802098950526"/>
+        </scene>
+    </scenes>
+</document>
